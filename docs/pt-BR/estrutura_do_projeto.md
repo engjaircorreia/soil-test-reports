@@ -39,9 +39,6 @@ Este documento descreve os arquivos que devem compor o repositório público e s
 │   ├── granulometria_modelo_limpo.xlsx
 │   └── granulometry_clean_template_en.xlsx
 ├── scripts/
-│   ├── create_clean_templates.py
-│   ├── create_english_templates.py
-│   ├── diagnostico_fluxo_testelocal.py
 │   └── validate_workbooks.py
 ├── tests/
 ├── docs/
@@ -83,7 +80,7 @@ Este documento descreve os arquivos que devem compor o repositório público e s
 
 `static/` contém CSS e JavaScript da interface web.
 
-`scripts/` contém scripts auxiliares de criação, diagnóstico e validação.
+`scripts/` contém o script de validação usado para conferir a integridade dos modelos Excel.
 
 `tests/` contém a suíte automatizada.
 

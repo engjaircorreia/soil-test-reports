@@ -39,6 +39,7 @@ This document describes the public repository layout and separates versioned sou
 │   ├── granulometria_modelo_limpo.xlsx
 │   └── granulometry_clean_template_en.xlsx
 ├── scripts/
+│   └── validate_workbooks.py
 ├── tests/
 ├── docs/
 │   ├── en/
@@ -75,7 +76,7 @@ This document describes the public repository layout and separates versioned sou
 
 `static/` contains CSS and JavaScript for the web UI.
 
-`scripts/` contains maintenance, diagnostic and validation scripts.
+`scripts/` contains the workbook validation script used to check template integrity.
 
 `tests/` contains the automated test suite.
 
