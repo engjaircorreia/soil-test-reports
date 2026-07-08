@@ -104,7 +104,7 @@ Open:
 http://localhost:8000
 ```
 
-More details are available in [docs/docker.md](docs/docker.md).
+More details are available in [docs/en/docker.md](docs/en/docker.md).
 
 ## Tests and Validation
 
@@ -140,11 +140,13 @@ Generated workbooks are written to `media/generated/` in the web workflow and to
 ## Documentation
 
 - [Portuguese README](README.pt-BR.md)
-- [Project structure](docs/estrutura_do_projeto.md)
-- [Docker guide](docs/docker.md)
-- [Cell map](docs/mapa_de_celulas.md)
-- [AI extraction prompt contract](docs/prompt_extracao_ia.md)
-- [Repository hygiene checklist](docs/repository_hygiene.md)
+- [English documentation](docs/en/README.md)
+- [Portuguese documentation](docs/pt-BR/README.md)
+- [Project structure](docs/en/project_structure.md)
+- [Docker guide](docs/en/docker.md)
+- [Cell map](docs/en/cell_map.md)
+- [AI extraction prompt contract](docs/en/ai_extraction_prompt.md)
+- [Repository hygiene checklist](docs/en/repository_hygiene.md)
 
 ## Repository Hygiene
 

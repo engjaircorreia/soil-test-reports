@@ -45,6 +45,8 @@ Este documento descreve os arquivos que devem compor o repositório público e s
 │   └── validate_workbooks.py
 ├── tests/
 ├── docs/
+│   ├── en/
+│   └── pt-BR/
 ├── output/
 │   ├── .gitkeep
 │   └── README.md
@@ -85,7 +87,9 @@ Este documento descreve os arquivos que devem compor o repositório público e s
 
 `tests/` contém a suíte automatizada.
 
-`docs/` contém a documentação técnica.
+`docs/en/` contém a documentação em inglês.
+
+`docs/pt-BR/` contém a documentação em português brasileiro.
 
 `output/` fica versionada apenas com `.gitkeep` e `README.md`; planilhas geradas são ignoradas.
 

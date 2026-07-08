@@ -104,7 +104,7 @@ Acesse:
 http://localhost:8000
 ```
 
-Mais detalhes em [docs/docker.md](docs/docker.md).
+Mais detalhes em [docs/pt-BR/docker.md](docs/pt-BR/docker.md).
 
 ## Testes e Validação
 
@@ -140,11 +140,13 @@ As planilhas geradas pelo fluxo web ficam em `media/generated/`. As saídas de s
 ## Documentação
 
 - [README em inglês](README.md)
-- [Estrutura do projeto](docs/estrutura_do_projeto.md)
-- [Guia Docker](docs/docker.md)
-- [Mapa de células](docs/mapa_de_celulas.md)
-- [Contrato do prompt de extração por IA](docs/prompt_extracao_ia.md)
-- [Checklist de higiene do repositório](docs/higiene_repositorio.md)
+- [Documentação em português](docs/pt-BR/README.md)
+- [Documentação em inglês](docs/en/README.md)
+- [Estrutura do projeto](docs/pt-BR/estrutura_do_projeto.md)
+- [Guia Docker](docs/pt-BR/docker.md)
+- [Mapa de células](docs/pt-BR/mapa_de_celulas.md)
+- [Contrato do prompt de extração por IA](docs/pt-BR/prompt_extracao_ia.md)
+- [Checklist de higiene do repositório](docs/pt-BR/higiene_repositorio.md)
 
 ## Higiene do Repositório
 
