@@ -32,7 +32,7 @@ The AI is used only for extraction. Technical calculations are handled by determ
 │   └── services/         # Extraction, normalization, calculations and Excel filling
 ├── templates/            # Clean Excel templates in PT and EN
 ├── static/               # CSS and JavaScript for the web UI
-├── scripts/              # Maintenance and validation scripts
+├── scripts/              # Workbook validation script
 ├── docs/                 # Project documentation
 ├── output/               # Local script output folder
 ├── tests/                # Automated tests
@@ -50,7 +50,21 @@ Local-only files such as raw lab photos, generated media, SQLite databases, virt
 - OpenAI API key
 - Docker, optional
 
-## Environment
+## Installation
+
+Clone the repository:
+
+```bash
+git clone git@github.com:engjaircorreia/soil-test-reports.git
+cd soil-test-reports
+```
+
+If you prefer HTTPS:
+
+```bash
+git clone https://github.com/engjaircorreia/soil-test-reports.git
+cd soil-test-reports
+```
 
 Create a virtual environment:
 

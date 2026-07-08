@@ -32,7 +32,7 @@ A IA é usada apenas para extração. Os cálculos técnicos ficam em serviços 
 │   └── services/         # Extração, normalização, cálculos e preenchimento Excel
 ├── templates/            # Modelos Excel limpos em PT e EN
 ├── static/               # CSS e JavaScript da interface web
-├── scripts/              # Scripts de manutenção e validação
+├── scripts/              # Script de validação das planilhas
 ├── docs/                 # Documentação do projeto
 ├── output/               # Pasta de saída para scripts locais
 ├── tests/                # Testes automatizados
@@ -50,7 +50,21 @@ Arquivos locais, fotos brutas, mídia gerada, banco SQLite, ambientes virtuais e
 - Chave da API da OpenAI
 - Docker, opcional
 
-## Ambiente
+## Instalação
+
+Clone o repositório:
+
+```bash
+git clone git@github.com:engjaircorreia/soil-test-reports.git
+cd soil-test-reports
+```
+
+Se preferir HTTPS:
+
+```bash
+git clone https://github.com/engjaircorreia/soil-test-reports.git
+cd soil-test-reports
+```
 
 Crie o ambiente virtual:
 
