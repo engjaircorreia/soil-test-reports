@@ -1,0 +1,83 @@
+{% extends "ensaios/base.html" %}
+
+{% block title %}Novo ensaio{% endblock %}
+
+{% block content %}
+<section class="panel">
+  <h1 data-i18n="newTestTitle">Novo ensaio</h1>
+  <form method="post" enctype="multipart/form-data" class="form-grid">
+    {% csrf_token %}
+    <fieldset class="field-section">
+      <legend data-i18n="modelSection">Modelo</legend>
+      <div class="field-grid two-cols">
+        <div data-field="expected_test_type">{{ form.expected_test_type.label_tag }}{{ form.expected_test_type }}{{ form.expected_test_type.errors }}</div>
+        <div data-field="language">{{ form.language.label_tag }}{{ form.language }}{{ form.language.errors }}</div>
+      </div>
+    </fieldset>
+
+    <fieldset class="field-section" data-test-block="proctor" data-visible-for="compactacao_cbr ambos">
+      <legend data-i18n="proctorSection">Proctor</legend>
+      <div class="field-grid two-cols">
+        <div data-field="proctor_interessado">{{ form.proctor_interessado.label_tag }}{{ form.proctor_interessado }}{{ form.proctor_interessado.errors }}</div>
+        <div data-field="proctor_obra">{{ form.proctor_obra.label_tag }}{{ form.proctor_obra }}{{ form.proctor_obra.errors }}</div>
+        <div data-field="proctor_energia">{{ form.proctor_energia.label_tag }}{{ form.proctor_energia }}{{ form.proctor_energia.errors }}</div>
+        <div data-field="proctor_registro">{{ form.proctor_registro.label_tag }}{{ form.proctor_registro }}{{ form.proctor_registro.errors }}</div>
+        <div data-field="proctor_estaca">{{ form.proctor_estaca.label_tag }}{{ form.proctor_estaca }}{{ form.proctor_estaca.errors }}</div>
+        <div data-field="proctor_profundidade">{{ form.proctor_profundidade.label_tag }}{{ form.proctor_profundidade }}{{ form.proctor_profundidade.errors }}</div>
+        <div data-field="proctor_data_ensaio">{{ form.proctor_data_ensaio.label_tag }}{{ form.proctor_data_ensaio }}{{ form.proctor_data_ensaio.errors }}</div>
+        <div data-field="proctor_procedencia">{{ form.proctor_procedencia.label_tag }}{{ form.proctor_procedencia }}{{ form.proctor_procedencia.errors }}</div>
+        <div data-field="proctor_cidade">{{ form.proctor_cidade.label_tag }}{{ form.proctor_cidade }}{{ form.proctor_cidade.errors }}</div>
+        <div data-field="proctor_responsavel_tecnico">{{ form.proctor_responsavel_tecnico.label_tag }}{{ form.proctor_responsavel_tecnico }}{{ form.proctor_responsavel_tecnico.errors }}</div>
+      </div>
+      <div class="field-grid">
+        <div data-field="proctor_observacoes">{{ form.proctor_observacoes.label_tag }}{{ form.proctor_observacoes }}{{ form.proctor_observacoes.errors }}</div>
+      </div>
+    </fieldset>
+
+    <fieldset class="field-section" data-test-block="cbr" data-visible-for="compactacao_cbr ambos">
+      <legend data-i18n="cbrSection">CBR</legend>
+      <div class="field-grid two-cols">
+        <div data-field="cbr_registro">{{ form.cbr_registro.label_tag }}{{ form.cbr_registro }}{{ form.cbr_registro.errors }}</div>
+        <div data-field="cbr_molde_numero">{{ form.cbr_molde_numero.label_tag }}{{ form.cbr_molde_numero }}{{ form.cbr_molde_numero.errors }}</div>
+        <div data-field="cbr_peso_molde">{{ form.cbr_peso_molde.label_tag }}{{ form.cbr_peso_molde }}{{ form.cbr_peso_molde.errors }}</div>
+        <div data-field="cbr_volume_molde">{{ form.cbr_volume_molde.label_tag }}{{ form.cbr_volume_molde }}{{ form.cbr_volume_molde.errors }}</div>
+        <div data-field="cbr_numero_camadas">{{ form.cbr_numero_camadas.label_tag }}{{ form.cbr_numero_camadas }}{{ form.cbr_numero_camadas.errors }}</div>
+        <div data-field="cbr_golpes_camada">{{ form.cbr_golpes_camada.label_tag }}{{ form.cbr_golpes_camada }}{{ form.cbr_golpes_camada.errors }}</div>
+        <div data-field="cbr_peso_soquete">{{ form.cbr_peso_soquete.label_tag }}{{ form.cbr_peso_soquete }}{{ form.cbr_peso_soquete.errors }}</div>
+        <div data-field="cbr_espessura_disco">{{ form.cbr_espessura_disco.label_tag }}{{ form.cbr_espessura_disco }}{{ form.cbr_espessura_disco.errors }}</div>
+        <div data-field="cbr_altura_cilindro">{{ form.cbr_altura_cilindro.label_tag }}{{ form.cbr_altura_cilindro }}{{ form.cbr_altura_cilindro.errors }}</div>
+        <div data-field="cbr_constante_prensa">{{ form.cbr_constante_prensa.label_tag }}{{ form.cbr_constante_prensa }}{{ form.cbr_constante_prensa.errors }}</div>
+      </div>
+    </fieldset>
+
+    <fieldset class="field-section" data-test-block="granulometria" data-visible-for="granulometria ambos">
+      <legend data-i18n="gradationSection">Granulometria e limites</legend>
+      <div class="field-grid two-cols">
+        <div data-field="gran_empresa_executora" data-visible-for="granulometria">{{ form.gran_empresa_executora.label_tag }}{{ form.gran_empresa_executora }}{{ form.gran_empresa_executora.errors }}</div>
+        <div data-field="gran_obra">{{ form.gran_obra.label_tag }}{{ form.gran_obra }}{{ form.gran_obra.errors }}</div>
+        <div data-field="gran_procedencia">{{ form.gran_procedencia.label_tag }}{{ form.gran_procedencia }}{{ form.gran_procedencia.errors }}</div>
+        <div data-field="gran_camada">{{ form.gran_camada.label_tag }}{{ form.gran_camada }}{{ form.gran_camada.errors }}</div>
+        <div data-field="gran_estaca">{{ form.gran_estaca.label_tag }}{{ form.gran_estaca }}{{ form.gran_estaca.errors }}</div>
+        <div data-field="gran_lado">{{ form.gran_lado.label_tag }}{{ form.gran_lado }}{{ form.gran_lado.errors }}</div>
+        <div data-field="gran_profundidade">{{ form.gran_profundidade.label_tag }}{{ form.gran_profundidade }}{{ form.gran_profundidade.errors }}</div>
+        <div data-field="gran_data_ensaio">{{ form.gran_data_ensaio.label_tag }}{{ form.gran_data_ensaio }}{{ form.gran_data_ensaio.errors }}</div>
+        <div data-field="gran_laboratorio">{{ form.gran_laboratorio.label_tag }}{{ form.gran_laboratorio }}{{ form.gran_laboratorio.errors }}</div>
+        <div data-field="gran_operador">{{ form.gran_operador.label_tag }}{{ form.gran_operador }}{{ form.gran_operador.errors }}</div>
+        <div data-field="gran_laboratorista">{{ form.gran_laboratorista.label_tag }}{{ form.gran_laboratorista }}{{ form.gran_laboratorista.errors }}</div>
+        <div data-field="gran_registro">{{ form.gran_registro.label_tag }}{{ form.gran_registro }}{{ form.gran_registro.errors }}</div>
+      </div>
+    </fieldset>
+
+    <fieldset class="field-section">
+      <legend data-i18n="fileSection">Arquivos do ensaio</legend>
+      <div data-field="files">
+        {{ form.files.label_tag }}{{ form.files }}
+        <ul class="selected-files-list" data-selected-files></ul>
+        <span class="helptext" data-files-help>{{ form.files.help_text }}</span>
+        {{ form.files.errors }}
+      </div>
+    </fieldset>
+    <button type="submit" data-i18n="uploadButton">Enviar e extrair</button>
+  </form>
+</section>
+{% endblock %}

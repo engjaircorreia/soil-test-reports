@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv*/
+venv/
+ENV/
+
+# Django/local databases
+db.sqlite3
+*.sqlite3
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Generated web media and local outputs
+media/
+output/*.xlsx
+output/*.pdf
+output/**/*.xlsx
+output/**/*.pdf
+
+# Local-only project material
+local_files/
+testelocal/
+
+# Internal planning notes
+/PLANO_IMPLEMENTACAO_DJANGO.md
+/PROMPTS_IMPLEMENTACAO.md
+/plano*.md
+/prompts*.md
+/prompt*.md
+
+# Legacy/raw lab material that must not be published
+ENSAIOS/
+planilhas_geradas/
+granulometria_geradas/
+av_beira_mar_ficticios/
+BEIRA_MAR_ORGANIZADO/
+*_backup*/
+*incompativel*/
+
+# Excel temporary files
+~$*.xlsx
+~$*.xlsm
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

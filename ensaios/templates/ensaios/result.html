@@ -1,0 +1,19 @@
+{% extends "ensaios/base.html" %}
+
+{% block title %}Resultado{% endblock %}
+
+{% block content %}
+<section class="panel">
+  <h1>Resultado</h1>
+  <p>Status: {{ job.get_status_display }}</p>
+  {% if job.output_files %}
+    <ul>
+      {% for file in job.output_files %}
+        <li><a href="{% url 'ensaios:download' job.id forloop.counter0 %}">{{ file.name|default:file }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Nenhum arquivo gerado ainda.</p>
+  {% endif %}
+</section>
+{% endblock %}

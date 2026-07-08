@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Ensaios{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}?v=20260708-4">
+  <script src="{% static 'js/app.js' %}?v=20260708-15" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{% url 'ensaios:upload' %}" data-i18n="brand">Ensaios</a>
+    <button class="theme-toggle" type="button" data-theme-toggle data-i18n="themeToggle">Claro/Escuro</button>
+  </header>
+  <main class="shell">
+    {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+          <p class="message {{ message.tags }}">{{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
